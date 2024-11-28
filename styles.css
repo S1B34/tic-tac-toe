@@ -1,0 +1,141 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #1D1A39, #451952, #662549, #AE4A5A, #F3955A, #EBBCB9);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+  }
+  
+  .container {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.1); /* Light background to see the colors better */
+    backdrop-filter: blur(10px);
+    padding: 30px 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    width: 90%;
+    max-width: 400px;
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #AE4A5A; /* Warm reddish tone for the heading */
+    text-shadow: 2px 2px 4px #662549; /* Deeper shadow for depth */
+  }
+  
+  /* Board Styling */
+  .board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin: 20px 0;
+  }
+  
+  .cell {
+    width: 100px;
+    height: 100px;
+    background: #EBBCB9; /* Lightest color for cells */
+    color: #1D1A39; /* Dark color for text */
+    font-size: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s ease, background 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .cell:hover {
+    transform: scale(1.05);
+    background: #F3955A; /* Highlight color on hover */
+  }
+  
+  .cell.taken {
+    cursor: not-allowed;
+    background: #662549; /* Darker shade when taken */
+  }
+  .cell.playerX {
+    color: #AE4A5A; /* Green for X */
+}
+
+.cell.playerO {
+    color: #451952; /* Blue for O */
+}
+  
+  .cell.winning {
+    background: #F3955A; /* Highlight winning cells */
+    color: #fff;
+    animation: glow 1s infinite alternate;
+  }
+  
+  /* Status and Reset Button */
+  #status {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    color: #451952; /* Status color */
+  }
+  
+  #reset-button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    background: #662549; /* Dark purple */
+    color: #fff;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+  }
+  
+  #reset-button:hover {
+    background: #AE4A5A; /* Lighter red */
+    transform: scale(1.05);
+  }
+  
+  /* Animations */
+  @keyframes glow {
+    from {
+      box-shadow: 0 0 10px #F3955A, 0 0 20px #F3955A;
+    }
+    to {
+      box-shadow: 0 0 20px #F3955A, 0 0 40px #F3955A;
+    }
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  .container {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 30px 40px;
+    width: 90%;
+    max-width: 400px;
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  .gif-title img {
+    width: 100%;  /* Adjust this as necessary to fit your layout */
+    max-width: 100px;  /* Keeps the GIF from becoming too large */
+    height: auto;
+    margin-bottom: 20px;
+  }
+  
+  /* Additional styles remain unchanged */
+  
